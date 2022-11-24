@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../../assets/css/signup.css";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 // import { InputTextValue, SetSigninStatusFalse, SignInData } from "./../../_redux/reducers/LoginReducer";
 import { InputTextValue, SetSigninStatusFalse, SignInData } from "./_redux/actions/LoginActions";
-const Login = () => {
+const Login = ({setHideToolbar}) => {
   const [LoginForm, setLoginForm] = useState(1);
-  let navigate = useNavigate();
+  let history = useHistory();
   const dispatch = useDispatch();
 
   const [LoginInfo, setLoginInfo] = useState({
@@ -29,16 +29,25 @@ const Login = () => {
     });
   };
 
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("is_logged_in") || "false";
-    if (isLoggedIn === "true") {
-      // navigate("./home");
-    }
-  }, []);
+  // useEffect(() => {
+  //   const isLoggedIn = localStorage.getItem("is_logged_in") || "false";
+  //   if (isLoggedIn === "true") {
+  //     history("/home");
+  //   }
+  // }, []);
 
   const doLogin = (e) => {
     console.log(LoginInfo);
+      history.push("/home");
+
   };
+
+  useEffect(() => {
+    setHideToolbar(true);
+    return () => {
+      setHideToolbar(false);
+    };
+  }, []);
   return (
     <section className="forms-section">
       <h1 className="section-title">Please,Do a Quick Signup,It won't take more than 20 seconds..</h1>

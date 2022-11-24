@@ -5,14 +5,13 @@
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --white: #dddddd;
   --dark: #222831;
-  --navy-dark: #30475e;
   --pink-red: #f05454;
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   --font-sans: "Calibre", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --white: #dddddd;
   --dark: #222831;
-  --navy-dark: #30475e;
+  --navy-dark: #0f1113;
   --pink-red: #f05454;
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   --font-sans: "Calibre", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
@@ -36,7 +35,7 @@
   background-color: var(--pink-red);
 }
 html {
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
   font-family: var(--font-balo);
   font-family: "Baloo Bhai 2", cursive !important;
   /* overflow: hidden; */
@@ -109,7 +108,7 @@ html {
 }
 .landing_text h1 {
   color: var(--pink-red);
-  font-size: 8rem;
+  font-size: 5rem;
   font-weight: 800;
   font-family: Helvetica, sans-serif;
   line-height: 1.3;
@@ -119,8 +118,7 @@ html {
 .landing_text h5 {
   color: var(--white);
   font-style: var(--font-segoe);
-  font-size: 2rem;
-  font-size: 3.6rem;
+  font-size: 1.6rem;
   line-height: 1.9;
   letter-spacing: 0.122em;
   font-weight: 100;
@@ -131,7 +129,7 @@ html {
   color: var(--white);
   font-weight: 100;
   font-weight: 100;
-  font-size: 1.3gitrem;
+  font-size: .7rem;
   line-height: 1.9;
   letter-spacing: 0.208em;
 }

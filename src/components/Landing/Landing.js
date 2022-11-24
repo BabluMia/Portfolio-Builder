@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import landingImg from "../../assets/img/hero.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "./landing.css";
 import { Link } from "react-router-dom";
-const Landing = () => {
+const Landing = ({setHideToolbar}) => {
   var settings = {
     dots: true,
     fade: true,
@@ -16,6 +16,12 @@ const Landing = () => {
     autoplay: true,
     cssEase: "linear",
   };
+  useEffect(() => {
+    setHideToolbar(true);
+    return () => {
+      setHideToolbar(false);
+    };
+  }, []);
   return (
     <div className="landing_container_main">
       <div className="landing_container shadow-lg">
