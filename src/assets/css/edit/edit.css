@@ -1,0 +1,276 @@
+.edit_btn {
+  background: var(--pink-red);
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.edit_btn:hover {
+  background: rgb(238, 66, 66);
+}
+/* .editBar {
+	position: fixed;
+	bottom: 5%;
+	left: 50%;
+	transform: translate(-50%, -30%);
+	z-index: 150;
+	border-radius: 10px;
+	width: auto;
+	cursor: pointer;
+	box-shadow: 98px 42px 78px -14px rgba(0,0,0,0.1);
+} */
+
+.editBar {
+	bottom: 12%;
+	z-index: 150;
+	border-radius: 10px;
+	width: 95vw;
+	cursor: pointer;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+  
+}
+
+.editBar_menu {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 10px;
+	box-shadow: 98px 42px 78px -14px rgba(0,0,0,0.1);
+	position: fixed
+
+
+}
+.editBar_close {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: red;
+  position: absolute;
+  top: -29px;
+  right: -23px;
+}
+.editBar_menu button {
+  width: 40%;
+  border-radius: 6px;
+  padding: 5px;
+  color: white;
+  font-size: 15px;
+  height: 80%;
+  margin: 0 10px;
+}
+
+.editBar_btn_group {
+	display: flex;
+	align-items: center;
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: 23px 1px 57px -4px rgba(0,0,0,0.1),8px -4px 15px -3px rgba(0,0,0,0.1);
+	background: white;
+	margin: 2px 4px;
+	height: 30px;
+	font-weight: bold;
+	color: #193c61;
+}
+
+.editBar_btn_group:hover{
+	background: rgb(234, 233, 233);
+
+
+}
+
+.editBar_btn_group svg {
+	width: 14px;
+	margin: 0 4px;
+}
+
+.editBar_btn_group p{
+  margin: auto;
+}
+
+
+.editHero {
+  width: 25vw;
+  position: absolute;
+  right: 10%;
+  background: var(--dark);
+  padding: 52px 31px;
+  border-radius: 7px;
+  bottom: 18%;
+  position: fixed;
+  z-index: 300;
+  height: 70vh;
+}
+.element_hide {
+  transform: translateX(100%);
+  transition: var(--transition);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.element_show {
+  transform: translateX(0%);
+  transition: var(--transition);
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+.signup-form input,
+.login-form input {
+  padding: 10px;
+}
+
+.signup-form {
+  border-radius: 10px 0 0 10px;
+}
+
+.login-form {
+  border-radius: 0 10px 10px 0;
+}
+
+/* ----------------------------- */
+
+.editProjects {
+  width: 50vw;
+  right: 10%;
+  background: var(--dark);
+  padding: 52px 31px;
+  border-radius: 7px;
+  /* bottom: 18%; */
+  position: fixed;
+  z-index: 300;
+  overflow: hidden;
+  top: 10%;
+  height: 70vh;
+}
+
+.upload_container {
+	position: relative;
+	background: white;
+	color: black;
+	font-size: 1rem;
+	border-radius: 5px;
+	border: 2px solid;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.upload_container:hover{
+	/* border: 2px solid var(--pink-red); */
+	background-color: #c7f0d2;
+	cursor: pointer!important;
+
+}
+
+.logo_image {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.upload_container p {
+  font-size: 1.5rem;
+  padding: 10px;
+  text-align: left;
+  color: #666363;
+  font-weight: 350;
+}
+.hidden_file_upload {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+
+  width: 100%;
+
+  height: 100%;
+}
+
+.scrollable {
+  height: 0px;
+  min-height: 100%;
+  padding: 8px;
+  overflow-y: scroll;
+}
+
+.project_scrollable {
+  height: 0px;
+  min-height: 80%;
+  padding: 8px;
+  overflow-y: scroll;
+}
+
+label{
+		float: left;
+		margin: 8px 0;
+		color: rgb(177, 177, 177);
+		font-size: 14px;
+		font-weight: 400;
+}
+
+
+/* for Mobile devices */
+@media only screen and (max-width: 750px) {
+  body {
+    overflow-x: hidden;
+  }
+
+
+  html {
+    font-size: 58.5%;
+  }
+
+  .element_show {
+    width: 40vh !important;
+  }
+
+  .edit_btn {
+    width: 5rem;
+    height: 5rem;
+  }
+  .editBar_btn_group svg {
+    margin: 0 2px;
+    width: 10px;
+  }
+
+  .editBar_btn_group {
+    padding: 2px;
+    margin: 2px 1px;
+    height: 30px;
+  }
+
+  .editBar {
+    bottom: 5%;
+    width: 95vw;
+    position: absolute;
+  }
+ 
+  }
+
+@media only screen and (min-width: 751px) and (max-width: 1300px) {
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .port_hero {
+    margin: 0 15rem;
+  }
+}

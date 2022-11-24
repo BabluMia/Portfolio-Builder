@@ -1,0 +1,62 @@
+.slickAndImageContainer {
+  width: 300px !important;
+  margin: auto;
+}
+.slickAndImageContainer_lg {
+	width: 430px !important;
+	margin: auto;
+	margin-right: 26px;
+}
+.landingImg_Container {
+  width: 100%;
+  height: 100%;
+}
+
+.landingImg_Container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 1px solid #0d6857;
+}
+.slick-dots {
+  bottom: 6px;
+}
+.slick-dots li.slick-active button::before {
+  color: white;
+}
+
+.slick-dots li button::before {
+  color: white;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev {
+  left: 10px;
+  z-index: 2;
+}
+.img_container_md_sm {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+ 
+  .img_container_md_sm {
+    display: block;
+    width: 85%;
+  }
+  .img_container_lg{
+    display: none;
+  }
+}
+
+/* for Mobile devices */
+@media only screen and (max-width: 750px) {
+
+
+  .img_container_md_sm {
+    display: block;
+  }
+}
