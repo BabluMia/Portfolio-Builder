@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
+import user from '../../asstes/icon.bablu/user.svg'
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
@@ -15,6 +16,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { useHistory } from "react-router-dom";
 const pages = ["Products", "Pricing", "Blog",'Review'];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
+
 
 const MuiNav = () => {
     const history= useHistory()
@@ -36,7 +38,7 @@ const MuiNav = () => {
     setAnchorElUser(null);
   };
   return (
-    <AppBar position="static" style={{backgroundColor:'#0A192F'}}>
+    <AppBar position="fixed" className="px-md-4 px-1" style={{backgroundColor:'#0A192F'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -110,6 +112,7 @@ const MuiNav = () => {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              fontSize:'20px'
             }}
           >
             P. Builder
@@ -120,7 +123,7 @@ const MuiNav = () => {
                 key={page}
                 onClick={handleCloseNavMenu}
                 // onClick={()=>history.push('/')}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, color: "white", display: "block",fontSize:'16px' }}
               >
                 {page}
               </Button>
@@ -130,7 +133,8 @@ const MuiNav = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+              <Avatar alt="Travis Howard" src={user} />
+              {/* <img src={user} alt="" /> */}
               </IconButton>
             </Tooltip>
             <Menu
