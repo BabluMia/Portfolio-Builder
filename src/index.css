@@ -13,7 +13,7 @@ body {
   --font-sans: "Calibre", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   --fz-xxs: 1.1rem;
-  --fz-xs: 1.3rem;
+  --fz-xs: 1.5rem;
   --fz-sm: 1.7rem;
   --fz-md: 2rem;
   --fz-lg: 2.2rem;
@@ -240,7 +240,8 @@ button:hover {
   width: auto;
   min-width: 50vw;
   display: flex;
-  margin: 0 30rem;
+  /* margin: 0 30rem; */
+  padding: 0 10rem;
 }
 .hero_left {
   margin-top: 12rem;
@@ -255,7 +256,7 @@ button:hover {
 
 .port_hero h2 {
   color: var(--lightest-slate);
-  font-size: clamp(4rem, 7rem, 10rem);
+  font-size: clamp(2rem, 4rem, 6rem);
   font-style: var(--font-sans);
   margin-top: 1rem;
 }
@@ -269,7 +270,7 @@ button:hover {
 	font-size: var(--fz-xs);
 	color: var(--slate);
 	letter-spacing: 0.2em;
-	max-width: 45rem;
+	max-width: 70rem;
 	margin: 1rem 0 5rem 0;
 }
 
