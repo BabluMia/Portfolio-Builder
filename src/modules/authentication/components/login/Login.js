@@ -29,12 +29,16 @@ const Login = () => {
     console.log("first", data);
     dispatch(SignInData(data));
   };
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("is_logged_in") || "false";
-    if (isLoggedIn === "true") {
-      // history.push("/home");
-    }
-  }, []);
+  const signIn = ()=>{
+    console.log("login")
+    history.push("/home");
+  }
+  // useEffect(() => {
+  //   const isLoggedIn = localStorage.getItem("is_logged_in") || "false";
+  //   if (isLoggedIn === "true") {
+  //     history.push("/home");
+  //   }
+  // }, []);
   
 
   // ---------------------add json file---------------------
@@ -137,7 +141,8 @@ const Login = () => {
                 </div>
                 <button
                   className="signin_btn m-auto my-5 d-block"
-                  onClick={() => handleSignIn(loginInput)}
+                  onClick={signIn}
+                  // onClick={() => login()}
                 >
                   <span>Sign In</span>
                 </button>
