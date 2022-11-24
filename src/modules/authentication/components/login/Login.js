@@ -32,7 +32,7 @@ const Login = () => {
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("is_logged_in") || "false";
     if (isLoggedIn === "true") {
-      history.push("/home");
+      // history.push("/home");
     }
   }, []);
   
