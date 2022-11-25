@@ -1,13 +1,13 @@
-import rk from "./img/rk.jpg";
-import rkr from "./img/rkr.png";
+// import rk from "./img/rk.jpg";
+// import rkr from "./img/rkr.png";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
-import "./css/socialmedia.css";
+import "../../asstes/css/socialmedia.css";
 import "font-awesome/css/font-awesome.min.css";
 import { Link } from "react-router-dom";
 const About = () => {
   return (
     <>
-      <section id="about" className="full_screen">
+      <section id="about" className="full_screen" style={{backgroundColor:'#0A192F'}}>
         <div className="about_container">
           <div className="content_container">
             <div className="about_content">
@@ -60,6 +60,9 @@ const About = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div>
+        
         </div>
       </section>
     </>
